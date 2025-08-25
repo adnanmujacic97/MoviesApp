@@ -1,19 +1,18 @@
 <div class="app-wrapper">
-  <header class="text-center mt-4 mb-4">
-    <h1>Movies site</h1>
+  <header class="zaglavlje">
+    <h1>Movies site</h1>  
+    <nav>
+      <a routerLink="/" routerLinkActive="active" class="nav-link">Home</a>
+      <a routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
+      <a routerLink="/movies" routerLinkActive="active" class="nav-link">Movies</a>
+    </nav>
   </header>
-  
-  <nav>
-    <a routerLink="/" routerLinkActive="active" class="nav-link">Home</a>
-    <a routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
-    <a routerLink="/movies" routerLinkActive="active" class="nav-link">Movies</a>
-  </nav>
 
   <main>
     <router-outlet />
   </main>
 
-  <footer class="text-center mb-4 text-secondary">
+  <footer>
     <p>Angular Style Guide Example Page</p>
   </footer>
 </div>

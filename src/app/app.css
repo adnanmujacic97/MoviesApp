@@ -4,6 +4,28 @@
   flex-direction: column;
 }
 
+/* .zaglavlje, .glavno
+{
+    background-color: white;
+}
+
+.zaglavlje img
+{
+    margin: 20px 0px 10px 20px;
+}
+
+.zaglavlje p
+{
+    background-color: #e3e3e3;
+    height:30px;
+    margin-bottom:0px;
+    padding-left:40px;
+    padding-top:7px;
+    padding-top:7px;
+    border-top: solid 2px #ccc;
+    border-bottom: solid 2px #ccc;
+} */
+
 nav {
   background-color: #333;
   padding: 1rem;
@@ -33,5 +55,14 @@ main {
 }
 
 footer {
-  margin-top: auto;
+  /* background-color: white; */
+    padding-top: 15px;
+    min-height: 30px;
+    background: #7b7775;
+    color:white;
+    text-align:center;
+}
+
+footer p {
+  margin: 0 10 0 10px;
 }

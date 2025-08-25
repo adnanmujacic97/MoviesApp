@@ -1,15 +1,24 @@
 .app-wrapper {
-  min-height: 100vh;
+  max-width: 1000px;
+  min-height: 1200px;
+  overflow: hidden;
   display: flex;
+  flex-basis: 100%;
   flex-direction: column;
+  gap: 1rem;
+  background-color: var(--bg-color2);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  color: var(--text-color);
+
 }
 
-/* .zaglavlje, .glavno
+ .zaglavlje
 {
-    background-color: white;
+    background-color: var(--secondary-color);
 }
 
-.zaglavlje img
+/* .zaglavlje img
 {
     margin: 20px 0px 10px 20px;
 }
@@ -24,12 +33,19 @@
     padding-top:7px;
     border-top: solid 2px #ccc;
     border-bottom: solid 2px #ccc;
-} */
+}  */
+
+.zaglavlje h1
+{
+    color: var(--text-color);
+    text-align:center;
+}
+
 
 nav {
   background-color: #333;
   padding: 1rem;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 nav a {
@@ -54,6 +70,8 @@ main {
   padding: 0 1rem;
 }
 
+
+
 footer {
   /* background-color: white; */
     padding-top: 15px;
@@ -61,6 +79,9 @@ footer {
     background: #7b7775;
     color:white;
     text-align:center;
+    /* display: flex;
+    justify-content: center; */
+
 }
 
 footer p {

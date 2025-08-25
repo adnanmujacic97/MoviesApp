@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Movie } from './movie.model';
 
 @Component({
   selector: 'app-movies',
@@ -7,14 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './movies.component.css'
 })
 
-class Movie {
-  constructor(
-    public title: string,
-    public description: string,
-    public imageUrl: string,
-    public price: number
-  ) {}
-}
+
 
 export class MoviesComponent {
   movies: Movie[] = [

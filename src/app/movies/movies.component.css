@@ -1,63 +1,80 @@
 .kartica-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
 }
 
 .kartica {
-    /* display: inline-block; */
-    height: 400px;
-    width: 400px;
-    border-radius: 10px;
-    background-color: var(--primary-color);
-    overflow: hidden;
+  width: 400px;
+  height: 400px;
+  font-family:Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  overflow: hidden;
+  color: var(--text-color);
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: start; /* Content starts from top */
+  
+  transition: transform 0.3s ease-in-out;
 }
 
+.kartica:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.88);  
+}
+
+
+/* Image and text side by side */
 .pos-info {
-    /* flex-direction: row; */
-    display: inline-block;
-    width: 50%;
-    margin: 10px;
+  display: flex;
+  align-items: flex-start; /* Top-align image and text */
+  gap: 15px;
+  margin-bottom: 10px;
 }
 
-.kartica h2 {
-    color: white;
+/* Poster image */
+.poster {
+  margin: 10px;
+  width: 120px;
+  height: 160px;
+  border: 1px solid white;
+  border-radius: 5px;
+  object-fit: cover;
+  flex-shrink: 0; /* Prevents image from shrinking */
 }
 
+/* Title and price (stacked) to the right of image */
 .info {
-   /* flex: 1;                  */
-   display: block;
-   width: 200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column; /* Stacks h3 and price vertically */
+  justify-content: center;
+  gap: 8px; /* Space between title and price */
 }
 
 .info h3 {
-  margin: 5px;
-  padding: 5px;
-}
-
-.poster {
-  margin: 5px 15px 10px 0;
-  border-radius: 5px;
-  border: 1px solid white;
-  padding: 5px;
-  width: 200px;
-  height: 200px;
-  /* flex-shrink: 0; */
-  float: left;
-  width: 200px;
-   
+  margin: 0;
+  font-size: 1.3em;
+  color: white;
 }
 
 .price {
-    display: block;
-    color: yellow;
-    padding: 5px;
+  color: yellow;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin: auto;
 }
 
+/* Description below everything */
 .description {
-    margin: 10px;
-    
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin-top: auto; /* Pushes it down if space allows */
+  padding: 5px 10px;
 }
+

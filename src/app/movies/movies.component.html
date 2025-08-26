@@ -1,10 +1,11 @@
 <div class="kartica-container">
-    <div class="kartica" *ngFor="let movie of movies">
+    <div class="kartica" *ngFor="let movie of movies" [id]="movie.id" (click) = "onKarticaClick(movie.id)" >
+        
         <div class="pos-info">
             <img [src]="movie.imageUrl" [alt]="movie.title" class="poster" />
             <div class="info">
                 <span><h3>{{ movie.title }}</h3></span>
-                <span class="price">${{ movie.price }}</span>
+                <span class="price">{{ movie.price }} KM</span>
             </div>
         </div>
         <div class="description">

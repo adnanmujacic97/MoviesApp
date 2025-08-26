@@ -1,1 +1,16 @@
-<p>movies works!</p>
+<div class="kartica-container">
+    <div class="kartica" *ngFor="let movie of movies">
+        <div class="pos-info">
+            <img [src]="movie.imageUrl" [alt]="movie.title" class="poster" />
+            <div class="info">
+                <span><h3>{{ movie.title }}</h3></span>
+                <span class="price">${{ movie.price }}</span>
+            </div>
+        </div>
+        <div class="description">
+            <p>
+                {{movie.description}}
+            </p>
+        </div>
+    </div>
+</div>

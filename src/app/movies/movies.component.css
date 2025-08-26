@@ -1,0 +1,63 @@
+.kartica-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.kartica {
+    /* display: inline-block; */
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    overflow: hidden;
+}
+
+.pos-info {
+    /* flex-direction: row; */
+    display: inline-block;
+    width: 50%;
+    margin: 10px;
+}
+
+.kartica h2 {
+    color: white;
+}
+
+.info {
+   /* flex: 1;                  */
+   display: block;
+   width: 200px;
+}
+
+.info h3 {
+  margin: 5px;
+  padding: 5px;
+}
+
+.poster {
+  margin: 5px 15px 10px 0;
+  border-radius: 5px;
+  border: 1px solid white;
+  padding: 5px;
+  width: 200px;
+  height: 200px;
+  /* flex-shrink: 0; */
+  float: left;
+  width: 200px;
+   
+}
+
+.price {
+    display: block;
+    color: yellow;
+    padding: 5px;
+}
+
+.description {
+    margin: 10px;
+    
+}

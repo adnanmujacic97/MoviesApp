@@ -15,3 +15,32 @@
         </div>
     </div>
 </div>
+
+@if (modalMovie != null){
+<div class="modal-overlay" id="modalOverlay" (click) = "onOverlayClick()">
+    <div class="modal">
+        <div class="modal-header">
+            <h2 class="modal-title">Welcome to Our Modal</h2>
+            <button class="close-btn" id="closeModal" (click)="onCloseBtnClick()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <!-- <div class="kartica">                 -->
+                <div class="pos-info">
+                    <img [src]="modalMovie.imageUrl" [alt]="modalMovie.title" class="poster" />
+                    <div class="info">
+                        <span><h3>{{ modalMovie.title }}</h3></span>
+                        <span class="price">{{ modalMovie.price }} KM</span>
+                    </div>
+                </div>
+                <div class="description">
+                    <p>
+                        {{modalMovie.description}}
+                    </p>
+                <!-- </div> -->
+            </div>   
+        </div>
+        <div class="modal-footer">
+        </div>
+    </div>
+</div>
+}

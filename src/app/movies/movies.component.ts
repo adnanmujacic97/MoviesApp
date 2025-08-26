@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Movie } from './movie.model';
 import { CommonModule } from '@angular/common';
 
@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 
 
 export class MoviesComponent {
+  modalMovie: any;
   movies: Movie[] = [
     new Movie(
       1,
@@ -168,8 +169,39 @@ export class MoviesComponent {
       21.99
     )
   ];
+  
+  modalOverlay: any;
 
   onKarticaClick(id: number) {
-    alert('Movie ID: ' + id);
+    this.modalMovie = this.movies.find(movie => movie.id === id);
+    // alert('Movie ID: ' + this.modalMovie.title);
+    this.modalOverlay = document.getElementById('modalOverlay');
+    this.modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
   }
+
+  onCloseBtnClick() {
+    this.modalOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
+  }
+
+    // Close modal with ESC key
+  // document.addEventListener('keydown', function(e) {
+  //     if (e.key === 'Escape' && this.modalOverlay.classList.contains('active')) {
+  //         this.closeModal();
+  //     }
+  // });
+
+  @HostListener('document:keydown', ['$event'])
+    onKeydown(event: KeyboardEvent) { {
+      if (event.key === 'Escape' && this.modalOverlay.classList.contains('active')) {
+        this.onCloseBtnClick();
+      }
+    }
+  }
+
+  onOverlayClick(){
+    this.onCloseBtnClick()
+  }
+
 }

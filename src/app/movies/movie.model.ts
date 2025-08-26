@@ -11,3 +11,4 @@ export class Movie {
     return this.price + ' KM'
   }
 }
+

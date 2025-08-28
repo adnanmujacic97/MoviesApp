@@ -1,28 +1,26 @@
 
 @if (movie != null){
-<div class="modal-overlay" id="modalOverlay">
+<div class="modal-overlay" id="modalOverlay" (click)="onClose()">
     <div class="modal">
         <div class="modal-header">
-            <h2 class="modal-title">Welcome to Our Modal</h2>
+            <h2 class="modal-title"><h3>{{ movie.title }}</h3></h2>
             <button class="close-btn" id="closeModal" (click)="onClose()">&times;</button>
         </div>
         <div class="modal-body">
-            <!-- <div class="kartica">                 -->
-                <div class="pos-info">
-                    <img [src]="movie.imageUrl" [alt]="movie.title" class="modal-poster poster " />
-                    <div class="info">
-                        <span><h3>{{ movie.title }}</h3></span>
-                        <span class="price">{{ movie.price }} KM</span>
-                    </div>
-                </div>
-                <div class="description">
-                    <p>
-                        {{movie.description}}
-                    </p>
-                <!-- </div> -->
+            <div>
+                <img [src]="movie.imageUrl" [alt]="movie.title" class="modal-img " />
+                <br/>                        
+                <hr/>
+                <div class="content-opposite price white-text">
+                    <h2>Cijena:</h2>
+                    <h2>{{ movie.price }} KM</h2>
+                </div>                               
+                <hr/>
+                <br/>    
+            </div>
+            <div class="description">
+                <p>{{movie.description}}</p>
             </div>   
-        </div>
-        <div class="modal-footer">
         </div>
     </div>
 </div>

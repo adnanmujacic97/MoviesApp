@@ -47,10 +47,11 @@
     align-items: center;
 }
 
-.modal-title {
+.modal .modal-title {
     font-size: 1.5rem;
-    color: #333;
-    margin: 0;
+    color: white;
+    margin: auto;
+    text-align: center;
 }
 
 .close-btn {
@@ -78,7 +79,7 @@
 }
 
 .modal-body p {
-    color: #666;
+    /* color: #666; */
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -91,9 +92,22 @@
     justify-content: flex-end;
 }
 
-.modal img {
-  max-width: 100%;           /* ✅ image scales down to fit modal */
-  height: auto;              /* keep aspect ratio */
+.modal .modal-img {
+  max-width: 100%;
+  margin:auto;           
+  height: auto;             
   display: block;
-  border-radius: 6px;
+  border: 1px solid white;
+  border-radius: 6px;    
+}
+
+.content-opposite {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;    
+}
+
+.white-text {
+    color:white;
 }

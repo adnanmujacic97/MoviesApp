@@ -6,9 +6,5 @@ export class Movie {
     public imageUrl: string,
     public price: number
   ) {}
-
-  printPrice(){
-    return this.price + ' KM'
-  }
 }
 

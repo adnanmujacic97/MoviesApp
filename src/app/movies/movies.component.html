@@ -1,6 +1,5 @@
 <div class="kartica-container">
-    <div class="kartica" *ngFor="let movie of movies" [id]="movie.id" (click) = "onKarticaClick(movie.id)" >
-        
+    <div class="kartica" *ngFor="let movie of movies" [id]="movie.id" (click) = "onKarticaClick(movie)" >        
         <div class="pos-info">
             <img [src]="movie.imageUrl" [alt]="movie.title" class="poster" />
             <div class="info">

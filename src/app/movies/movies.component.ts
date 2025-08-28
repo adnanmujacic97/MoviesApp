@@ -172,19 +172,20 @@ export class MoviesComponent {
     )
   ];
   
-  modalOverlay: any;
 
-  onKarticaClick(id: number) {
-    let modal = new Modal();
-    if (this.movies !== undefined ){
-    this.modalMovie = this.movies.find(movie => movie.id === id);
-    this.isModalOpen = true;
+  // onKarticaClick(id: number) {
+  //     if (this.movies !== undefined ){
+  //     this.modalMovie = this.movies.find(movie => movie.id === id);
+  //     this.isModalOpen = true;
+  //   }
+  // }
+
+  onKarticaClick(movie: Movie) {
+      if (this.movies !== undefined ){
+      this.modalMovie = movie;
+      this.isModalOpen = true;
+    }
   }
-    // alert('Movie ID: ' + this.modalMovie.title);
-    
-
-  }
-
 
 
 }

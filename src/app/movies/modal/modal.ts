@@ -12,27 +12,30 @@ export class Modal {
 
   
 
-  // modalOverlay: any;
   @Input() movie!: Movie;
-  // constructor(movie?: Movie) {};
 
-  @Input() isOpen = false;          // controls visibility
-  @Input() title = '';              // modal title
+  @Input() isOpen = false;          
+  // @Input() title = '';              
   @Output() close = new EventEmitter<void>();
 
   onClose() {
     this.close.emit();
   }
 
-  // @HostListener('document:keydown', ['$event'])
-  //   onKeydown(event: KeyboardEvent) { {
-  //     if (event.key === 'Escape' && this.modalOverlay.classList.contains('active')) {
-  //       this.onCloseBtnClick();
-  //     }
-  //   }
-  // }
+//   @HostListener('document:keydown', ['$event'])
+//     onKeydown(event: KeyboardEvent) { {
+//       if (event.key === 'Escape' && this.isOpen) {
+//         this.onClose();
+//       }
+//     }
+//   }
+// }
 
-  // onOverlayClick(){
-  //   this.onCloseBtnClick()
-  // }
+  @HostListener('document:keydown.escape')
+  onEscapeKey() {
+    if (this.isOpen) {
+      this.onClose();
+    }
+  }
+  
 }

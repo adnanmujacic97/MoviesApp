@@ -1,5 +1,6 @@
-import { Component, Input, HostListener, Output, EventEmitter } from '@angular/core';
+import { Component, Input, HostListener, Output, EventEmitter, Signal } from '@angular/core';
 import { Movie } from '../movie.model';
+
 import { MoviesComponent } from '../movies.component';
 
 @Component({
@@ -37,5 +38,5 @@ export class Modal {
       this.onClose();
     }
   }
-  
+
 }

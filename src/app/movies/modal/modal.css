@@ -12,7 +12,7 @@
     z-index: 1000;
     opacity: 1;
     visibility: visible;
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease; */
 
 }
 
@@ -30,7 +30,7 @@
     overflow-y: auto;
     position: relative;
     /* transform: translateY(-50px); */
-    transition: transform 0.3s ease;
+    /* transition: transform 0.3s ease; */
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 
 }
@@ -110,4 +110,19 @@
 
 .white-text {
     color:white;
+}
+
+.enter-animation {
+  animation: slide-fade 1s;
+}
+
+@keyframes slide-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -1,7 +1,7 @@
 
 @if (movie != null){
 <div class="modal-overlay" id="modalOverlay" (click)="onClose()">
-    <div class="modal">
+    <div class="modal" (click)="$event.stopPropagation()">
         <div class="modal-header">
             <h2 class="modal-title"><h3>{{ movie.title }}</h3></h2>
             <button class="close-btn" id="closeModal" (click)="onClose()">&times;</button>

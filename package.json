@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-xampp": "ng build --configuration production --base-href /movies-app/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:movies-app": "node dist/movies-app/server/server.mjs"
